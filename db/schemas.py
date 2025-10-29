@@ -5,7 +5,7 @@ from datetime import datetime
 class ArticleBase(BaseModel):
     article_id: str
     title: str
-    creation_date: datetime
+    creationDate: datetime
     siteUrl: str
     siteName: str
     collected_date: datetime
