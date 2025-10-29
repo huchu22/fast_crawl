@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy.orm import Session
 
-from db.schemas import ArticleBase, Pagination
+from db.article.schemas import Pagination
 from db.session import get_db
-from db import crud
+from db.article import crud
 
 router = APIRouter()
 
