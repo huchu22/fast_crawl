@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 
-from db.models import Article
+from db.article.article_models import Article
 
 def get_all_articles(db, offset=0, limit=20):
     total = db.query(Article).count()
