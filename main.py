@@ -14,7 +14,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# 라우터 등록g
+# 라우터 등록
 app.include_router(articles.router, prefix="/api/articles")
 app.include_router(bookmark.router, prefix="/api/bookmarks")
 app.include_router(readstatus.router, prefix="/api/readstatus")

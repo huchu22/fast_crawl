@@ -10,6 +10,11 @@ class ArticleBase(BaseModel):
     siteName: str
     collected_date: datetime
 
+    class Config:
+        json_encoders = {
+            datetime: lambda v: v.strftime("%Y.%m.%d %H:%M")
+        }
+
 # 페이지 네이션을 위한 모델
 class Pagination(BaseModel):
     total: int

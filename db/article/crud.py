@@ -17,7 +17,7 @@ def get_articles_sitename(
         db: Session,
         siteName: str,
         offset: int = 0,
-        limit: int = 10
+        limit: int = 15
 ):
     total = db.query(Article).filter(Article.siteName == siteName).count()
     items = (
