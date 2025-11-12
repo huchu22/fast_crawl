@@ -3,9 +3,10 @@ from sqlalchemy.orm import Session
 from db.article.article_models import Article
 
 def get_all_articles(db, offset=0, limit=20):
+    query = db.query(Article).filter(Article.siteName != 'hot_deal')
     total = db.query(Article).count()
     items = (
-        db.query(Article)
+        query
          .order_by(Article.creationDate.desc())
          .offset(offset)
          .limit(limit)
